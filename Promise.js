@@ -1,7 +1,7 @@
 function Promise(executor) {
 	var successCallbacks = [];
   var failureCallbacks = [];
-  var state = 'pending';
+  var state = 'pending'; 
   
   var resolve = function(resolutionValue) {
 		if (state != 'pending') { return; }
