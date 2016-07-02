@@ -31,7 +31,7 @@ function Promise(executor) {
       };
 
       var failureCallback = function(rejection) {
-        var callbackResult = s(resolution);
+        var callbackResult = f(rejection);
         if (typeof callbackResult == 'object' && 'then' in callbackResult) {
           callbackResult.then(resolve, reject);
         } else {
